@@ -1,0 +1,28 @@
+apply plugin: 'java'
+
+group 'com.thoughtworks.interview'
+version '1.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+sourceSets {
+    main {
+        java {
+            include 'src/main/java/**'
+        }
+    }
+    test {
+        java {
+            include 'src/test/java/**'
+        }
+    }
+
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
